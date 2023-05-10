@@ -1,0 +1,213 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{Atividade de Laplace}
+\author{Raniery Monteiro de Oliveira}
+\date{05/05/2023}
+
+\begin{document}
+
+    \maketitle
+    \section{Lei de Laplace e suas permutações}
+    
+    
+    \[
+    \det(A) = \sum_{\sigma \in S_4} \left( \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(\sigma)} a_{i\sigma(i)} \right)
+    \] \newline
+    
+    \ {S}$_4$ = \{'1234', '1243', '1324', '1432', '1342', '1423', 
+    '2134', '2143', '2314', '2431', '2413', '2341', 
+    '3214', '3124', '3241', '3412', '3142', '3421', 
+    '4231', '4132', '4213', '4321', '4123', '4312'\} \newline
+    
+    \section{Produtória de todas as permutações possíveis}
+    
+    \[
+    det(A)=
+    \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(1234')} a_{i1234'(i)} 
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(1243')} a_{i1243'(i)} 
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(1324')} a_{i1324'(i)} 
+    \]\newline
+    \[
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(1432')} a_{i1432'(i)} 
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(1342')} a_{i1342'(i)} 
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(1423')} a_{i1423'(i)}
+    \]\newline
+    
+    \[
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(2134')} a_{i2134'(i)} 
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(2143')} a_{i2143'(i)} 
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(2314')} a_{i2314'(i)} 
+    \]\newline
+    
+    \[
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(2431')} a_{i2431'(i)} 
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(2413')} a_{i2413'(i)} 
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(2341')} a_{i2341'(i)} 
+    \]\newline
+    
+    \[
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(3214')} a_{i3214'(i)} 
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(3124')} a_{i3124'(i)} 
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(3241')} a_{i3241'(i)} 
+    \]\newline
+    
+    \[
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(3412')} a_{i3412'(i)} 
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(3142')} a_{i3142'(i)} 
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(3421')} a_{i3421'(i)} 
+    \]\newline
+    
+    \[
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(4231')} a_{i4231'(i)}
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(4132')} a_{i4132'(i)}
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(4213')} a_{i4213'(i)} 
+    \]\newline
+    
+    \[
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(4321')} a_{i4321'(i)}
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(4123')} a_{i4123'(i)}
+    + \prod_{i=1}^{4} (-1)^{\mathrm{sgn}(4312')} a_{i4312'(i)}
+    \]\newline
+    
+    
+    \[
+    = a_{1_1}.a_{2_2}.a_{3_3}.a_{4_4} - a_{1_1}.a_{2_2}.a_{3_4}.a_{4_3} - a_{1_1}.a_{2_3}.a_{3_2}.a_{4_4} + a_{1_1}.a_{2_3}.a_{3_4}.a_{4_2} - a_{1_1}.a_{2_4}.a_{3_3}.a_{4_2}
+    \]
+    \[
+    + a_{1_1}.a_{2_4}.a_{3_2}.a_{4_3} - a_{1_2}.a_{2_1}.a_{3_3}.a_{4_4} + a_{1_2}.a_{2_1}.a_{3_4}.a_{4_3} + a_{1_2}.a_{2_3}.a_{3_1}.a_{4_4} + a_{1_2}.a_{2_4}.a_{3_3}.a_{4_1}
+    \]
+    \[
+    - a_{1_2}.a_{2_4}.a_{3_1}.a_-{4_3} - a_{1_2}.a_{2_3}.a_{3_4}.a_{4_1} - a_{1_3}.a_{2_2}.a_{3_1}.a_{4_4} + a_{1_3}.a_{2_1}.a_{3_2}.a_{4_4} + a_{1_3}.a_{2_2}.a_{3_4}.a_{4_1}
+    \]
+    \[
+    + a_{1_3}.a_{2_4}.a_{3_1}.a_{4_2} - a_{1_3}.a_{2_1}.a_{3_4}.a_{4_2} - a_{1_3}.a_{2_4}.a_{3_2}.a_{4_1} - a_{1_4}.a_{2_2}.a_{3_3}.a_{4_1} + a_{1_4}.a_{2_1}.a_{3_3}.a_{4_2}
+    \]
+    \[
+    + a_{1_4}.a_{2_2}.a_{3_1}.a_{4_3} + a_{1_4}.a_{2_3}.a_{3_2}.a_{4_1} - a_{1_4}.a_{2_1}.a_{3_2}.a_{4_3} - a_{1_4}.a_{2_3}.a_{3_1}.a_{4_2} 
+    \]
+    
+    \[
+    \newline
+    \]
+    
+    \section{Número de trocas que ouveram em cada permutação}
+    
+    \[ '1234' = 0 \hspace{1.5cm} '2134' = 1 \hspace{1.5cm} '3214' = 1 \hspace{1.5cm} '4231' = 1\] 
+    \[ '1243' = 1 \hspace{1.5cm} '2143' = 2 \hspace{1.5cm} '3124' = 2 \hspace{1.5cm} '4132' = 2\] 
+    \[ '1324' = 1 \hspace{1.5cm} '2314' = 2 \hspace{1.5cm} '3241' = 2 \hspace{1.5cm} '4213' = 2\] 
+    \[ '1432' = 1 \hspace{1.5cm} '2431' = 2 \hspace{1.5cm} '3412' = 2 \hspace{1.5cm} '4321' = 2\]
+    \[ '1342' = 2 \hspace{1.5cm} '2413' = 3 \hspace{1.5cm} '3142' = 3 \hspace{1.5cm} '4123' = 3\] 
+    \[ '1423' = 2 \hspace{1.5cm} '2341' = 3 \hspace{1.5cm} '3421' = 3 \hspace{1.5cm} '4312' = 3\] 
+    
+    \section {Laplace na prática com duas matrizes}
+    
+    
+    \[
+    A = 
+    \left[
+    \begin{array}{cccc}
+            1 & 2 & 3 & 4 \\
+            2 & 4 & 6 & 8 \\
+            3 & 6 & 9 & 12\\
+            4 & 8 & 12 & 16\\
+    \end{array}
+    \right]
+      $$  
+    \[1. 4. 9. 16 - 1.4.12.12 - 1.6.6.16 + 1.6.12.8 + 1.8.6.12 - 1.8.9.8 \]
+    \[- 2.2.9.16 + 2.2.12.12 + 2.6.3.16 - 2.6.12.4 - 2.8.3.12 + 2.8.9.4 \] 
+    \[+ 3.2.6.16 - 3.2.12.8 - 3.4.3.16 + 3.4.12.4 + 3.8.3.8 - 3.8.6.4 \] 
+    \[- 4.2.6.12 + 4.2.9.8 + 4.4.3.12 - 4.4.9.4 - 4.6.3.8 + 4.6.6.4\]
+
+    \[ A = 576 - 576 - 576 + 576 - 576 + 576 - 576 + 576 + 576 + 576 - 576 - 576 \]
+
+    \[ - 576 + 576 + 576 + 576 - 576 - 576 - 576 + 576 + 576 + 576 - 576 - 576 \]
+
+    \[
+    A = 0
+    \]
+    
+    \[
+    \newline
+    \]
+    
+    Segunda matriz com valor diferente de 0
+    
+    \[
+    \newline
+    \]
+    
+    \[
+    A = 
+    \left[
+    \begin{array}{cccc}
+            2 & 1 & 1 & 1 \\
+            1 & 3 & 1 & 1 \\
+            -1 & 2 & 2 & -1\\
+            1 & 1 & -1 & 3\\
+    \end{array}
+    \right]
+    $$
+    \[
+    \newline
+    \] 
+    
+    \[ A = 2.3.2.3 - 2.3.(-1).(-1) - 2.1.2.3 + 2.1.(-1).1 + 2.1.2.(-1) - 2.1.2.1\]
+    \[- 1.1.2.3 + 1.1.(-1).(-1) + 1.1.(-1).3 - 1.1.(-1).1 - 1.1.(-1).(-1) + 1.1.2.1\]
+    \[ + 1.1.2.3 - 1.1.(-1).1 - 1.3.(-1).3 + 1.3.(-1).1 + 1.1.(-1).1 - 1.1.2.1\]
+    \[ - 1.1.2.(-1) + 1.1.2.1 + 1.3.(-1).(-1) - 1.3.2.1 - 1.1.(-1).1 + 1.1.2.1\]
+    
+    \[ A =  36 - 6 - 12 - 2 - 4 + 4 + 6 + 1\] 
+    \[- 3 - 1 + 1 + 2 + 6 - 1 - 9 - 3\] 
+    \[- 1 + 2 - 2 + 2 + 3 + 6 - 1 + 2 \]
+    
+    \[ A = 16 \]
+\[
+    \newline
+\]
+\[
+    \newline     
+\]
+\[
+    \newline
+\]
+
+\section{Código da fórmula de Laplace}
+
+def Laplace(matriz):\\
+    
+    if len(matriz) == 2:\\
+
+        return matriz[0][0] * matriz[1][1] - matriz[0][1] * matriz[1][0]\\
+        
+    determinante = 0\\
+
+    for coluna in range(len(matriz)):\\
+
+        submatriz = [linha[0:coluna] + linha[coluna + 1:] for linha in matriz[1:]]\\
+
+        cofator = (-1) ** coluna * matriz[0][coluna]\\
+
+        pre_determinante = Laplace(submatriz)\\
+
+        determinante += cofator * pre_determinante\\
+
+    return determinante
+
+\[\newline\]
+matriz = [[1, 2, 3, 4], [2, 4, 6, 8], [3, 6, 9, 12], [4, 8, 12, 16]]\\\\
+determinante = Laplace(matriz)\\\\
+print("O resultado da matriz 1:", determinante)\\\\
+matriz = [[2, 1, 1, 1], [1, 3, 1, 1], [-1, 2, 2, -1], [1, 1, -1, 3]]\\\\
+determinante = Laplace(matriz)\\\\
+print("O resultado da matriz 2:", determinante)\\
+
+\[
+\newline
+\]
+
+\section{console:}
+O resultado da matriz 1: 0\\
+O resultado da matriz 2: 16
+
+\end{document}
